@@ -29,3 +29,13 @@ const setParas = (text) => {
     const htmlParas = paras.map((par) => `<p>${par.trim()}</p>\n`);
     return htmlParas.join('');
   };
+
+  const setPre = (text) => {
+    if (!text.startsWith('\n')) {
+      throw new Error('Should be line break after preformatted marker');
+    }
+    if (!text.endsWith('\n')) {
+      throw new Error('Should be line break before last preformatted marker');
+    }
+    return `<pre>${text}</pre>\n`;
+  };
