@@ -114,3 +114,10 @@ const setParas = (text) => {
   
     return parts.join('');
   };
+
+  if (outIdx !== -1 && process.argv[outIdx + 1]) {
+    const outFile = path.resolve(process.argv[outIdx + 1]);
+    fs.writeFile(outFile, mdToHtml());
+  } else {
+    console.log(mdToHtml());
+  }
