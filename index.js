@@ -19,3 +19,5 @@ const liReg = /(?<=[ ,.:;\n\t]|^)_(?=\S)/g;
 const riReg = /(?<=\S)_(?=[ ,.:;\n\t]|$)/g;
 const lmReg = /(?<=[ ,.:;\n\t]|^)`(?=\S)/g;
 const rmReg = /(?=\S)`(?=[ ,.:;\n\t]|$)/g;
+
+const markers = ['**', '_', '`'];
