@@ -1,0 +1,12 @@
+{
+    "name": "markdown-to-html-converter",
+    "version": "1.0.0",
+    "description": "An application that transforms Markdown syntax into HTML",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+      "test": "echo \"Error: test script not defined\" && exit 1"
+    },
+    "license": "ISC"
+  }
+  
