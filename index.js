@@ -23,3 +23,9 @@ const rmReg = /(?=\S)`(?=[ ,.:;\n\t]|$)/g;
 const markers = ['**', '_', '`'];
 
 const mdText = await fs.readFile(file, 'utf-8');
+
+const setParas = (text) => {
+    const paras = text.split('\n,\n').filter((par) => par.trim() !== '');
+    const htmlParas = paras.map((par) => `<p>${par.trim()}</p>\n`);
+    return htmlParas.join('');
+  };
