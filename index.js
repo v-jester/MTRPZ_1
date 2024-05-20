@@ -92,3 +92,25 @@ const setParas = (text) => {
       }
     }
   };
+
+  const mdToHtml = () => {
+    const parts = mdText.split('```');
+    if (parts.length % 2 === 0) {
+      throw new Error('No closing preformatted marker provided');
+    }
+  
+    for (let i = 0; i < parts.length; i++) {
+      if (i % 2 === 0) {
+        chkClosed(parts[i], lbReg, rbReg, bReg);
+        chkClosed(parts[i], liReg, riReg, iReg);
+        chkClosed(parts[i], lmReg, rmReg, mReg);
+        regs.forEach((reg, idx) => chkNested(parts[i], reg, markers[idx]));
+        parts[i] = setTags(parts[i]);
+        parts[i] = setParas(parts[i]);
+      } else {
+        parts[i] = setPre(parts[i]);
+      }
+    }
+  
+    return parts.join('');
+  };
