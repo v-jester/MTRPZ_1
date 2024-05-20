@@ -21,3 +21,5 @@ const lmReg = /(?<=[ ,.:;\n\t]|^)`(?=\S)/g;
 const rmReg = /(?=\S)`(?=[ ,.:;\n\t]|$)/g;
 
 const markers = ['**', '_', '`'];
+
+const mdText = await fs.readFile(file, 'utf-8');
