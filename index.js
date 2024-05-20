@@ -46,3 +46,17 @@ const setParas = (text) => {
       .replace(iReg, '<i>$1</i>')
       .replace(mReg, '<tt>$1</tt>');
   };
+
+  const chkClosed = (text, lReg, rReg, reg) => {
+    const matches = text.match(reg);
+    const lMatches = text.match(lReg);
+    const rMatches = text.match(rReg);
+  
+    const totalMatches = matches ? matches.length * 2 : 0;
+    const lCount = lMatches ? lMatches.length : 0;
+    const rCount = rMatches ? rMatches.length : 0;
+  
+    if (lCount + rCount !== totalMatches) {
+      throw new Error('There is no closing marker');
+    }
+  };
