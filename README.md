@@ -7,7 +7,6 @@ In this lab work, I developed an application that identifies certain markdown sy
 To use this application, you need to have Node.js version 20 or higher installed. First, you need to clone this repository using the command:
 
 ```
-
 git clone https://github.com/v-jester/MTRPZ_1.git
 ```
 
@@ -29,6 +28,4 @@ node index.js <path to your md file> --out <path to the html file>
 ### Revert commit message
 ```
 https://github.com/v-jester/MTRPZ_1/commit/1f8ea9bdb017badaedea6e30c3afbe0e268033a6
-
 ```
-
