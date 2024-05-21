@@ -24,7 +24,7 @@ node index.js <path to your md file>
 If you need to save the converted markdown syntax to an HTML file, you need to specify the --out flag, as shown in the example below:
 ```
 node index.js <path to your md file> --out <path to the html file>
-
+```
 
 ### Revert commit message
 ```
